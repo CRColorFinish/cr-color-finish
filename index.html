@@ -21,24 +21,11 @@
       line-height: 1.5;
     }
 
-    header {
-      background: #111;
-      padding: 15px 20px;
-      text-align: center;
-    }
-
-    header img {
-      width: 180px;
-      max-width: 70%;
-      background: white;
-      border-radius: 10px;
-    }
-
     .hero {
       background: #222;
       color: white;
       text-align: center;
-      padding: 50px 20px;
+      padding: 45px 20px 55px;
     }
 
     .hero img {
@@ -46,7 +33,13 @@
       max-width: 90%;
       background: white;
       border-radius: 12px;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
+    }
+
+    .phone {
+      font-size: 21px;
+      font-weight: bold;
+      margin: 5px 0 20px;
     }
 
     .hero h1 {
@@ -54,8 +47,10 @@
       margin: 10px 0;
     }
 
-    .hero p {
+    .hero p.description {
       font-size: 19px;
+      margin: 10px auto;
+      max-width: 650px;
     }
 
     .buttons {
@@ -76,6 +71,7 @@
       cursor: pointer;
       background: white;
       color: #111;
+      font-size: 16px;
     }
 
     .whatsapp {
@@ -91,6 +87,7 @@
 
     h2 {
       font-size: 32px;
+      margin-top: 0;
     }
 
     .services {
@@ -104,6 +101,10 @@
       padding: 20px;
       border-radius: 12px;
       border: 1px solid #ddd;
+    }
+
+    .service h3 {
+      margin-top: 0;
     }
 
     form {
@@ -127,52 +128,88 @@
       font-size: 16px;
     }
 
+    textarea {
+      resize: vertical;
+    }
+
     footer {
       background: #111;
       color: #aaa;
       text-align: center;
       padding: 30px 20px;
     }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding: 30px 15px 45px;
+      }
+
+      .hero img {
+        width: 280px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero p.description {
+        font-size: 17px;
+      }
+
+      .phone {
+        font-size: 19px;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-<header>
-  <img src="logo.png" alt="C.R. Color Finish">
-</header>
-
 <section class="hero">
 
   <img src="logo.png" alt="C.R. Color Finish">
 
+  <p class="phone">
+    📞 +39 328 017 9380
+  </p>
+
   <h1>Imbiancature professionali</h1>
 
-  <p>
+  <p class="description">
     Imbiancature e decorazioni artigianali a Dolceacqua e zone vicine.
   </p>
 
   <div class="buttons">
 
-    <a class="btn whatsapp"
-       href="https://wa.me/393280179380"
-       target="_blank">
+    <a
+      class="btn whatsapp"
+      href="https://wa.me/393280179380"
+      target="_blank"
+      rel="noopener">
       WhatsApp
     </a>
 
-    <a class="btn"
-       href="tel:+393280179380">
+    <a
+      class="btn"
+      href="tel:+393280179380">
       Chiama
     </a>
 
-    <a class="btn"
-       href="#preventivo">
+    <a
+      class="btn"
+      href="#preventivo">
       Richiedi un preventivo
     </a>
 
   </div>
 
 </section>
+
 
 <section class="section">
 
@@ -182,37 +219,50 @@
 
     <div class="service">
       <h3>🎨 Imbiancature</h3>
-      <p>Imbiancature professionali per interni ed esterni.</p>
+      <p>
+        Imbiancature professionali per interni ed esterni.
+      </p>
     </div>
 
     <div class="service">
       <h3>🏠 Antimuffa</h3>
-      <p>Trattamenti specifici contro muffa e problemi delle superfici.</p>
+      <p>
+        Trattamenti specifici contro muffa e problemi delle superfici.
+      </p>
     </div>
 
     <div class="service">
       <h3>🌡️ Anticondensa</h3>
-      <p>Soluzioni per superfici soggette a condensa.</p>
+      <p>
+        Soluzioni per superfici soggette a condensa.
+      </p>
     </div>
 
     <div class="service">
       <h3>🖌️ Decorazioni</h3>
-      <p>Finiture decorative e lavorazioni personalizzate.</p>
+      <p>
+        Finiture decorative e lavorazioni personalizzate.
+      </p>
     </div>
 
     <div class="service">
       <h3>🪵 Legno</h3>
-      <p>Verniciatura e recupero di elementi in legno.</p>
+      <p>
+        Verniciatura e recupero di elementi in legno.
+      </p>
     </div>
 
     <div class="service">
       <h3>🔧 Trattamenti</h3>
-      <p>Interventi specifici su superfici e problemi particolari.</p>
+      <p>
+        Interventi specifici su superfici e problemi particolari.
+      </p>
     </div>
 
   </div>
 
 </section>
+
 
 <section class="section">
 
@@ -228,6 +278,7 @@
 
 </section>
 
+
 <section class="section" id="preventivo">
 
   <h2>Richiedi un preventivo</h2>
@@ -240,17 +291,25 @@
 
     <label>
       Nome e cognome
-      <input type="text" id="nome" required>
+      <input
+        type="text"
+        id="nome"
+        required>
     </label>
 
     <label>
       Telefono
-      <input type="tel" id="telefono" required>
+      <input
+        type="tel"
+        id="telefono"
+        required>
     </label>
 
     <label>
       Comune
-      <input type="text" id="comune">
+      <input
+        type="text"
+        id="comune">
     </label>
 
     <label>
@@ -276,16 +335,18 @@
         rows="5"
         required
         placeholder="Descrivi brevemente il lavoro"></textarea>
-
     </label>
 
-    <button class="btn whatsapp" type="submit">
+    <button
+      class="btn whatsapp"
+      type="submit">
       Invia richiesta tramite WhatsApp
     </button>
 
   </form>
 
 </section>
+
 
 <section class="section">
 
@@ -296,57 +357,81 @@
     Cominetti Roberto
   </p>
 
-  <p>📍 Dolceacqua e zone vicine</p>
+  <p>
+    📍 Dolceacqua e zone vicine
+  </p>
+
+  <p>
+    📞 <strong>+39 328 017 9380</strong>
+  </p>
 
   <div class="buttons">
 
-    <a class="btn whatsapp"
-       href="https://wa.me/393280179380"
-       target="_blank">
+    <a
+      class="btn whatsapp"
+      href="https://wa.me/393280179380"
+      target="_blank"
+      rel="noopener">
       Scrivimi su WhatsApp
     </a>
 
-    <a class="btn"
-       href="tel:+393280179380">
-      +39 328 017 9380
+    <a
+      class="btn"
+      href="tel:+393280179380">
+      Chiama +39 328 017 9380
     </a>
 
   </div>
 
 </section>
 
+
 <footer>
+
   C.R. Color Finish<br>
   Imbiancature e Decorazioni Artigianali
+
 </footer>
+
 
 <script>
 
-document.getElementById("preventivoForm").addEventListener("submit", function(event) {
+  document
+    .getElementById("preventivoForm")
+    .addEventListener("submit", function(event) {
 
-  event.preventDefault();
+      event.preventDefault();
 
-  const nome = document.getElementById("nome").value;
-  const telefono = document.getElementById("telefono").value;
-  const comune = document.getElementById("comune").value;
-  const lavoro = document.getElementById("lavoro").value;
-  const descrizione = document.getElementById("descrizione").value;
+      const nome =
+        document.getElementById("nome").value;
 
-  const messaggio =
-    "Buongiorno, vorrei richiedere un preventivo.\n\n" +
-    "Nome: " + nome + "\n" +
-    "Telefono: " + telefono + "\n" +
-    "Comune: " + comune + "\n" +
-    "Tipo di lavoro: " + lavoro + "\n\n" +
-    "Descrizione:\n" + descrizione;
+      const telefono =
+        document.getElementById("telefono").value;
 
-  window.open(
-    "https://wa.me/393280179380?text=" +
-    encodeURIComponent(messaggio),
-    "_blank"
-  );
+      const comune =
+        document.getElementById("comune").value;
 
-});
+      const lavoro =
+        document.getElementById("lavoro").value;
+
+      const descrizione =
+        document.getElementById("descrizione").value;
+
+      const messaggio =
+        "Buongiorno, vorrei richiedere un preventivo.\n\n" +
+        "Nome: " + nome + "\n" +
+        "Telefono: " + telefono + "\n" +
+        "Comune: " + comune + "\n" +
+        "Tipo di lavoro: " + lavoro + "\n\n" +
+        "Descrizione:\n" + descrizione;
+
+      window.open(
+        "https://wa.me/393280179380?text=" +
+        encodeURIComponent(messaggio),
+        "_blank"
+      );
+
+    });
 
 </script>
 
