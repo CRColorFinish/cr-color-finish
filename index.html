@@ -20,7 +20,9 @@
     content="C.R. Color Finish - Imbiancature professionali e decorazioni artigianali a Dolceacqua e zone vicine."
   >
 
-  <title>C.R. Color Finish - Imbiancature professionali</title>
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <title>C.R. Color Finish</title>
 
   <style>
 
@@ -150,8 +152,7 @@
       border-radius: 14px;
       padding: 30px;
       border: 1px solid #ddd;
-      box-shadow:
-        0 3px 12px rgba(0,0,0,0.06);
+      box-shadow: 0 3px 12px rgba(0,0,0,0.06);
     }
 
     form {
@@ -254,10 +255,6 @@
 <body>
 
 
-<!-- ========================= -->
-<!-- HERO -->
-<!-- ========================= -->
-
 <section class="hero">
 
   <img
@@ -308,10 +305,6 @@
 
 </section>
 
-
-<!-- ========================= -->
-<!-- SERVIZI -->
-<!-- ========================= -->
 
 <section class="section">
 
@@ -409,10 +402,6 @@
 </section>
 
 
-<!-- ========================= -->
-<!-- LAVORI -->
-<!-- ========================= -->
-
 <section class="section">
 
   <div class="works">
@@ -447,10 +436,6 @@
 
 </section>
 
-
-<!-- ========================= -->
-<!-- PREVENTIVO -->
-<!-- ========================= -->
 
 <section
   class="section"
@@ -527,33 +512,19 @@
 
         <select id="lavoro">
 
-          <option>
-            Imbiancatura interna
-          </option>
+          <option>Imbiancatura interna</option>
 
-          <option>
-            Imbiancatura esterna
-          </option>
+          <option>Imbiancatura esterna</option>
 
-          <option>
-            Antimuffa
-          </option>
+          <option>Antimuffa</option>
 
-          <option>
-            Anticondensa
-          </option>
+          <option>Anticondensa</option>
 
-          <option>
-            Decorazione
-          </option>
+          <option>Decorazione</option>
 
-          <option>
-            Legno
-          </option>
+          <option>Legno</option>
 
-          <option>
-            Altro
-          </option>
+          <option>Altro</option>
 
         </select>
 
@@ -617,10 +588,6 @@
 </section>
 
 
-<!-- ========================= -->
-<!-- CONTATTI -->
-<!-- ========================= -->
-
 <section class="section">
 
   <h2>
@@ -674,10 +641,6 @@
 </section>
 
 
-<!-- ========================= -->
-<!-- FOOTER -->
-<!-- ========================= -->
-
 <footer>
 
   <strong>
@@ -695,10 +658,6 @@
 </footer>
 
 
-<!-- ========================= -->
-<!-- WHATSAPP -->
-<!-- ========================= -->
-
 <script>
 
   document
@@ -709,13 +668,11 @@
 
         event.preventDefault();
 
-
         const nome =
           document
             .getElementById("nome")
             .value
             .trim();
-
 
         const telefono =
           document
@@ -723,19 +680,16 @@
             .value
             .trim();
 
-
         const comune =
           document
             .getElementById("comune")
             .value
             .trim();
 
-
         const lavoro =
           document
             .getElementById("lavoro")
             .value;
-
 
         const superficie =
           document
@@ -743,62 +697,39 @@
             .value
             .trim();
 
-
         const descrizione =
           document
             .getElementById("descrizione")
             .value
             .trim();
 
-
         const messaggio =
-
           "Buongiorno, vorrei richiedere un preventivo." +
-
           "\n\n" +
-
           "Nome: " +
           nome +
-
           "\n" +
-
           "Telefono: " +
           telefono +
-
           "\n" +
-
           "Comune: " +
           (comune || "Non indicato") +
-
           "\n" +
-
           "Tipo di lavoro: " +
           lavoro +
-
           "\n" +
-
           "Superficie indicativa: " +
           (superficie || "Non indicata") +
-
           "\n\n" +
-
           "Descrizione del lavoro:" +
-
           "\n" +
-
           descrizione +
-
           "\n\n" +
-
           "Posso inviare delle foto del lavoro tramite WhatsApp.";
 
-
         const whatsappURL =
-
           "https://wa.me/393280179380?text=" +
-
           encodeURIComponent(messaggio);
-
 
         window.open(
           whatsappURL,
@@ -806,7 +737,6 @@
         );
 
       }
-
     );
 
 </script>
