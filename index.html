@@ -1,11 +1,18 @@
+```html
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta name="theme-color" content="#111111">
-  <meta name="description" content="C.R. Color Finish - Imbiancature e Decorazioni Artigianali">
+  <meta
+    name="description"
+    content="C.R. Color Finish - Imbiancature e Decorazioni Artigianali a Dolceacqua e zone vicine"
+  >
+
   <link rel="manifest" href="manifest.webmanifest">
+
   <title>C.R. Color Finish</title>
 
   <style>
@@ -79,6 +86,13 @@
       color: white;
     }
 
+    .quote-main {
+      background: #25D366;
+      color: white;
+      font-size: 18px;
+      padding: 16px 24px;
+    }
+
     .section {
       max-width: 1050px;
       margin: auto;
@@ -107,6 +121,14 @@
       margin-top: 0;
     }
 
+    .quote-box {
+      background: white;
+      border-radius: 14px;
+      padding: 30px;
+      border: 1px solid #ddd;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+    }
+
     form {
       max-width: 650px;
       display: grid;
@@ -126,10 +148,30 @@
       border: 1px solid #ccc;
       border-radius: 8px;
       font-size: 16px;
+      font-family: inherit;
     }
 
     textarea {
       resize: vertical;
+    }
+
+    .hint {
+      font-size: 14px;
+      color: #666;
+      margin-top: -8px;
+    }
+
+    .photo-note {
+      background: #f5f5f3;
+      border-radius: 10px;
+      padding: 15px;
+      font-size: 15px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      font-size: 18px;
+      padding: 16px;
     }
 
     footer {
@@ -140,6 +182,7 @@
     }
 
     @media (max-width: 600px) {
+
       .hero {
         padding: 30px 15px 45px;
       }
@@ -164,6 +207,14 @@
         width: 100%;
         max-width: 300px;
       }
+
+      .quote-main {
+        max-width: 320px;
+      }
+
+      .quote-box {
+        padding: 20px;
+      }
     }
   </style>
 </head>
@@ -172,7 +223,10 @@
 
 <section class="hero">
 
-  <img src="logo.png" alt="C.R. Color Finish">
+  <img
+    src="logo.png"
+    alt="C.R. Color Finish"
+  >
 
   <p class="phone">
     📞 +39 328 017 9380
@@ -201,9 +255,9 @@
     </a>
 
     <a
-      class="btn"
+      class="btn quote-main"
       href="#preventivo">
-      Richiedi un preventivo
+      📝 Richiedi un preventivo
     </a>
 
   </div>
@@ -281,69 +335,105 @@
 
 <section class="section" id="preventivo">
 
-  <h2>Richiedi un preventivo</h2>
+  <div class="quote-box">
 
-  <p>
-    Compila il modulo e invia la richiesta direttamente tramite WhatsApp.
-  </p>
+    <h2>Richiedi un preventivo</h2>
 
-  <form id="preventivoForm">
+    <p>
+      Compila i dati qui sotto. La richiesta verrà preparata
+      automaticamente e inviata tramite WhatsApp.
+    </p>
 
-    <label>
-      Nome e cognome
-      <input
-        type="text"
-        id="nome"
-        required>
-    </label>
+    <form id="preventivoForm">
 
-    <label>
-      Telefono
-      <input
-        type="tel"
-        id="telefono"
-        required>
-    </label>
+      <label>
+        Nome e cognome
+        <input
+          type="text"
+          id="nome"
+          autocomplete="name"
+          required
+          placeholder="Il tuo nome e cognome">
+      </label>
 
-    <label>
-      Comune
-      <input
-        type="text"
-        id="comune">
-    </label>
+      <label>
+        Telefono
+        <input
+          type="tel"
+          id="telefono"
+          autocomplete="tel"
+          required
+          placeholder="Il tuo numero di telefono">
+      </label>
 
-    <label>
-      Tipo di lavoro
+      <label>
+        Comune
+        <input
+          type="text"
+          id="comune"
+          autocomplete="address-level2"
+          placeholder="Dove deve essere eseguito il lavoro?">
+      </label>
 
-      <select id="lavoro">
-        <option>Imbiancatura interna</option>
-        <option>Imbiancatura esterna</option>
-        <option>Antimuffa</option>
-        <option>Anticondensa</option>
-        <option>Decorazione</option>
-        <option>Legno</option>
-        <option>Altro</option>
-      </select>
+      <label>
+        Tipo di lavoro
 
-    </label>
+        <select id="lavoro">
 
-    <label>
-      Descrizione del lavoro
+          <option>Imbiancatura interna</option>
+          <option>Imbiancatura esterna</option>
+          <option>Antimuffa</option>
+          <option>Anticondensa</option>
+          <option>Decorazione</option>
+          <option>Legno</option>
+          <option>Altro</option>
 
-      <textarea
-        id="descrizione"
-        rows="5"
-        required
-        placeholder="Descrivi brevemente il lavoro"></textarea>
-    </label>
+        </select>
 
-    <button
-      class="btn whatsapp"
-      type="submit">
-      Invia richiesta tramite WhatsApp
-    </button>
+      </label>
 
-  </form>
+      <label>
+        Superficie indicativa
+
+        <input
+          type="text"
+          id="superficie"
+          placeholder="Es. 80 m² oppure non lo so">
+      </label>
+
+      <label>
+        Descrizione del lavoro
+
+        <textarea
+          id="descrizione"
+          rows="5"
+          required
+          placeholder="Descrivi brevemente il lavoro da eseguire"></textarea>
+
+      </label>
+
+      <div class="photo-note">
+
+        📸 <strong>Puoi mandare anche delle foto.</strong>
+
+        <br>
+
+        Dopo aver inviato la richiesta potrai allegare
+        direttamente le fotografie del lavoro nella chat WhatsApp.
+
+      </div>
+
+      <button
+        class="btn whatsapp submit-btn"
+        type="submit">
+
+        📲 Invia richiesta tramite WhatsApp
+
+      </button>
+
+    </form>
+
+  </div>
 
 </section>
 
@@ -381,6 +471,12 @@
       Chiama +39 328 017 9380
     </a>
 
+    <a
+      class="btn quote-main"
+      href="#preventivo">
+      📝 Richiedi un preventivo
+    </a>
+
   </div>
 
 </section>
@@ -403,33 +499,48 @@
       event.preventDefault();
 
       const nome =
-        document.getElementById("nome").value;
+        document.getElementById("nome").value.trim();
 
       const telefono =
-        document.getElementById("telefono").value;
+        document.getElementById("telefono").value.trim();
 
       const comune =
-        document.getElementById("comune").value;
+        document.getElementById("comune").value.trim();
 
       const lavoro =
         document.getElementById("lavoro").value;
 
+      const superficie =
+        document.getElementById("superficie").value.trim();
+
       const descrizione =
-        document.getElementById("descrizione").value;
+        document.getElementById("descrizione").value.trim();
 
       const messaggio =
-        "Buongiorno, vorrei richiedere un preventivo.\n\n" +
-        "Nome: " + nome + "\n" +
-        "Telefono: " + telefono + "\n" +
-        "Comune: " + comune + "\n" +
-        "Tipo di lavoro: " + lavoro + "\n\n" +
-        "Descrizione:\n" + descrizione;
+        "Buongiorno, vorrei richiedere un preventivo." +
+        "\n\n" +
+        "Nome: " + nome +
+        "\n" +
+        "Telefono: " + telefono +
+        "\n" +
+        "Comune: " + (comune || "Non indicato") +
+        "\n" +
+        "Tipo di lavoro: " + lavoro +
+        "\n" +
+        "Superficie indicativa: " +
+        (superficie || "Non indicata") +
+        "\n\n" +
+        "Descrizione:" +
+        "\n" +
+        descrizione +
+        "\n\n" +
+        "Posso inviare delle foto del lavoro tramite WhatsApp.";
 
-      window.open(
+      const url =
         "https://wa.me/393280179380?text=" +
-        encodeURIComponent(messaggio),
-        "_blank"
-      );
+        encodeURIComponent(messaggio);
+
+      window.open(url, "_blank");
 
     });
 
@@ -437,3 +548,4 @@
 
 </body>
 </html>
+```
