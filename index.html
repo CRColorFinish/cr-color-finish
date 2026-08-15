@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="C.R. Color Finish - Imbiancature professionali a Dolceacqua e zone vicine.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <title>C.R. Color Finish</title>
+</head>
+<body>
+<header class="top">
+  <div class="brand">C.R. <span>Color Finish</span></div>
+  <div class="tagline">Imbiancature professionali</div>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="eyebrow">Dolceacqua e zone vicine</p>
+    <h1>Il tuo lavoro, fatto bene.</h1>
+    <p>Imbiancature, trattamenti e finiture professionali per interni ed esterni.</p>
+    <div class="actions">
+      <a class="btn primary" href="#preventivo">Richiedi un preventivo</a>
+      <a class="btn" href="tel:+390000000000">Chiama</a>
+    </div>
+  </section>
+
+  <section id="servizi" class="section">
+    <h2>Servizi</h2>
+    <div class="grid">
+      <article><h3>Imbiancature</h3><p>Interni ed esterni, preparazione e finitura.</p></article>
+      <article><h3>Antimuffa</h3><p>Trattamenti e pitture specifiche per ambienti soggetti a muffa.</p></article>
+      <article><h3>Anticondensa</h3><p>Soluzioni per migliorare il comfort delle superfici interne.</p></article>
+      <article><h3>Decorazioni</h3><p>Finiture decorative e abbinamenti personalizzati.</p></article>
+      <article><h3>Legno</h3><p>Verniciatura e recupero di elementi in legno.</p></article>
+      <article><h3>Trattamenti</h3><p>Interventi specifici su superfici e problemi particolari.</p></article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Lavori realizzati</h2>
+    <p class="muted">Qui inseriremo le tue fotografie prima/dopo e i lavori più belli.</p>
+    <div class="photo-placeholder">📸 Galleria fotografica</div>
+  </section>
+
+  <section id="preventivo" class="section">
+    <h2>Richiedi un preventivo</h2>
+    <p>Compila i dati e descrivi il lavoro. Potrai aggiungere le foto in un secondo momento tramite WhatsApp.</p>
+    <form id="quoteForm">
+      <label>Nome<input required name="nome" placeholder="Nome e cognome"></label>
+      <label>Telefono<input required name="telefono" type="tel" placeholder="Numero di telefono"></label>
+      <label>Comune<input name="comune" placeholder="Es. Ventimiglia"></label>
+      <label>Tipo di lavoro
+        <select name="lavoro">
+          <option>Imbiancatura interna</option>
+          <option>Imbiancatura esterna</option>
+          <option>Antimuffa</option>
+          <option>Anticondensa</option>
+          <option>Decorazione</option>
+          <option>Legno</option>
+          <option>Altro</option>
+        </select>
+      </label>
+      <label>Descrizione<textarea required name="descrizione" rows="5" placeholder="Descrivi brevemente il lavoro"></textarea></label>
+      <button class="btn primary" type="submit">Prepara richiesta WhatsApp</button>
+    </form>
+  </section>
+
+  <section class="section contact">
+    <h2>Contatti</h2>
+    <p><strong>C.R. Color Finish</strong><br>Cominetti Roberto</p>
+    <p>📍 Dolceacqua e zone vicine</p>
+    <a class="btn" href="https://wa.me/390000000000">WhatsApp</a>
+  </section>
+</main>
+
+<footer>C.R. Color Finish · Imbiancature professionali</footer>
+<script src="app.js"></script>
+</body>
+</html>
