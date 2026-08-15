@@ -2,22 +2,34 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="theme-color" content="#111111">
+  <meta charset="UTF-8">
+
   <meta
-    name="description"
-    content="C.R. Color Finish - Imbiancature e Decorazioni Artigianali a Dolceacqua e zone vicine"
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
   >
 
-  <link rel="manifest" href="manifest.webmanifest">
+  <meta
+    name="theme-color"
+    content="#111111"
+  >
 
-  <title>C.R. Color Finish</title>
+  <meta
+    name="description"
+    content="C.R. Color Finish - Imbiancature professionali e decorazioni artigianali a Dolceacqua e zone vicine."
+  >
+
+  <title>C.R. Color Finish - Imbiancature professionali</title>
 
   <style>
+
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -32,21 +44,23 @@
       background: #222;
       color: white;
       text-align: center;
-      padding: 45px 20px 55px;
+      padding: 40px 20px 50px;
     }
 
-    .hero img {
+    .logo {
       width: 320px;
       max-width: 90%;
+      height: auto;
       background: white;
       border-radius: 12px;
-      margin-bottom: 15px;
+      display: block;
+      margin: 0 auto 18px;
     }
 
     .phone {
       font-size: 21px;
       font-weight: bold;
-      margin: 5px 0 20px;
+      margin: 5px 0 18px;
     }
 
     .hero h1 {
@@ -54,15 +68,16 @@
       margin: 10px 0;
     }
 
-    .hero p.description {
+    .description {
       font-size: 19px;
-      margin: 10px auto;
       max-width: 650px;
+      margin: 10px auto;
     }
 
     .buttons {
       display: flex;
       justify-content: center;
+      align-items: center;
       gap: 12px;
       flex-wrap: wrap;
       margin-top: 25px;
@@ -70,7 +85,7 @@
 
     .btn {
       display: inline-block;
-      padding: 14px 20px;
+      padding: 14px 22px;
       border-radius: 9px;
       text-decoration: none;
       font-weight: bold;
@@ -79,6 +94,7 @@
       background: white;
       color: #111;
       font-size: 16px;
+      text-align: center;
     }
 
     .whatsapp {
@@ -86,11 +102,11 @@
       color: white;
     }
 
-    .quote-main {
+    .quote-button {
       background: #25D366;
       color: white;
       font-size: 18px;
-      padding: 16px 24px;
+      padding: 16px 25px;
     }
 
     .section {
@@ -106,7 +122,8 @@
 
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
       gap: 15px;
     }
 
@@ -121,12 +138,20 @@
       margin-top: 0;
     }
 
+    .works {
+      background: white;
+      border-radius: 14px;
+      padding: 25px;
+      border: 1px solid #ddd;
+    }
+
     .quote-box {
       background: white;
       border-radius: 14px;
       padding: 30px;
       border: 1px solid #ddd;
-      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+      box-shadow:
+        0 3px 12px rgba(0,0,0,0.06);
     }
 
     form {
@@ -144,34 +169,34 @@
     textarea {
       width: 100%;
       margin-top: 6px;
-      padding: 12px;
+      padding: 13px;
       border: 1px solid #ccc;
       border-radius: 8px;
       font-size: 16px;
-      font-family: inherit;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     textarea {
       resize: vertical;
     }
 
-    .hint {
-      font-size: 14px;
-      color: #666;
-      margin-top: -8px;
-    }
-
-    .photo-note {
+    .info {
       background: #f5f5f3;
       border-radius: 10px;
       padding: 15px;
+      margin: 10px 0 5px;
       font-size: 15px;
     }
 
-    .submit-btn {
+    .submit {
       width: 100%;
       font-size: 18px;
-      padding: 16px;
+      padding: 17px;
+    }
+
+    .contact-number {
+      font-size: 21px;
+      font-weight: bold;
     }
 
     footer {
@@ -187,7 +212,7 @@
         padding: 30px 15px 45px;
       }
 
-      .hero img {
+      .logo {
         width: 280px;
       }
 
@@ -195,7 +220,7 @@
         font-size: 32px;
       }
 
-      .hero p.description {
+      .description {
         font-size: 17px;
       }
 
@@ -205,37 +230,53 @@
 
       .btn {
         width: 100%;
-        max-width: 300px;
+        max-width: 320px;
       }
 
-      .quote-main {
+      .quote-button {
         max-width: 320px;
       }
 
       .quote-box {
         padding: 20px;
       }
+
+      h2 {
+        font-size: 28px;
+      }
+
     }
+
   </style>
+
 </head>
 
 <body>
+
+
+<!-- ========================= -->
+<!-- HERO -->
+<!-- ========================= -->
 
 <section class="hero">
 
   <img
     src="logo.png"
     alt="C.R. Color Finish"
+    class="logo"
   >
 
-  <p class="phone">
+  <div class="phone">
     📞 +39 328 017 9380
-  </p>
+  </div>
 
-  <h1>Imbiancature professionali</h1>
+  <h1>
+    Imbiancature professionali
+  </h1>
 
   <p class="description">
-    Imbiancature e decorazioni artigianali a Dolceacqua e zone vicine.
+    Imbiancature e decorazioni artigianali
+    a Dolceacqua e zone vicine.
   </p>
 
   <div class="buttons">
@@ -244,19 +285,22 @@
       class="btn whatsapp"
       href="https://wa.me/393280179380"
       target="_blank"
-      rel="noopener">
-      WhatsApp
+      rel="noopener"
+    >
+      💬 WhatsApp
     </a>
 
     <a
       class="btn"
-      href="tel:+393280179380">
-      Chiama
+      href="tel:+393280179380"
+    >
+      📞 Chiama
     </a>
 
     <a
-      class="btn quote-main"
-      href="#preventivo">
+      class="btn quote-button"
+      href="#preventivo"
+    >
       📝 Richiedi un preventivo
     </a>
 
@@ -265,52 +309,99 @@
 </section>
 
 
+<!-- ========================= -->
+<!-- SERVIZI -->
+<!-- ========================= -->
+
 <section class="section">
 
-  <h2>Servizi</h2>
+  <h2>
+    Servizi
+  </h2>
 
   <div class="services">
 
     <div class="service">
-      <h3>🎨 Imbiancature</h3>
+
+      <h3>
+        🎨 Imbiancature
+      </h3>
+
       <p>
-        Imbiancature professionali per interni ed esterni.
+        Imbiancature professionali
+        per interni ed esterni.
       </p>
+
     </div>
 
-    <div class="service">
-      <h3>🏠 Antimuffa</h3>
-      <p>
-        Trattamenti specifici contro muffa e problemi delle superfici.
-      </p>
-    </div>
 
     <div class="service">
-      <h3>🌡️ Anticondensa</h3>
+
+      <h3>
+        🏠 Antimuffa
+      </h3>
+
       <p>
-        Soluzioni per superfici soggette a condensa.
+        Trattamenti specifici contro
+        muffa e problemi delle superfici.
       </p>
+
     </div>
 
-    <div class="service">
-      <h3>🖌️ Decorazioni</h3>
-      <p>
-        Finiture decorative e lavorazioni personalizzate.
-      </p>
-    </div>
 
     <div class="service">
-      <h3>🪵 Legno</h3>
+
+      <h3>
+        🌡️ Anticondensa
+      </h3>
+
       <p>
-        Verniciatura e recupero di elementi in legno.
+        Soluzioni per superfici
+        soggette a condensa.
       </p>
+
     </div>
 
+
     <div class="service">
-      <h3>🔧 Trattamenti</h3>
+
+      <h3>
+        🖌️ Decorazioni
+      </h3>
+
       <p>
-        Interventi specifici su superfici e problemi particolari.
+        Finiture decorative e
+        lavorazioni personalizzate.
       </p>
+
+    </div>
+
+
+    <div class="service">
+
+      <h3>
+        🪵 Legno
+      </h3>
+
+      <p>
+        Verniciatura e recupero
+        di elementi in legno.
+      </p>
+
+    </div>
+
+
+    <div class="service">
+
+      <h3>
+        🔧 Trattamenti
+      </h3>
+
+      <p>
+        Interventi specifici su
+        superfici e problemi particolari.
+      </p>
+
     </div>
 
   </div>
@@ -318,118 +409,206 @@
 </section>
 
 
+<!-- ========================= -->
+<!-- LAVORI -->
+<!-- ========================= -->
+
 <section class="section">
 
-  <h2>Lavori realizzati</h2>
+  <div class="works">
 
-  <p>
-    Una selezione dei lavori realizzati da C.R. Color Finish.
-  </p>
+    <h2>
+      📸 Lavori realizzati
+    </h2>
 
-  <p>
-    Qui inseriremo le tue fotografie prima e dopo.
-  </p>
+    <p>
+      Una selezione dei lavori realizzati
+      da C.R. Color Finish.
+    </p>
+
+    <p>
+      Qui inseriremo le fotografie
+      <strong>prima e dopo</strong>
+      dei tuoi lavori.
+    </p>
+
+    <div class="buttons">
+
+      <a
+        class="btn quote-button"
+        href="#preventivo"
+      >
+        📝 Richiedi un preventivo
+      </a>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<section class="section" id="preventivo">
+<!-- ========================= -->
+<!-- PREVENTIVO -->
+<!-- ========================= -->
+
+<section
+  class="section"
+  id="preventivo"
+>
 
   <div class="quote-box">
 
-    <h2>Richiedi un preventivo</h2>
+    <h2>
+      Richiedi un preventivo
+    </h2>
 
     <p>
-      Compila i dati qui sotto. La richiesta verrà preparata
+      Compila il modulo con le informazioni
+      principali del lavoro.
+    </p>
+
+    <p>
+      La richiesta verrà preparata
       automaticamente e inviata tramite WhatsApp.
     </p>
 
+
     <form id="preventivoForm">
 
+
       <label>
+
         Nome e cognome
+
         <input
           type="text"
           id="nome"
           autocomplete="name"
+          placeholder="Il tuo nome e cognome"
           required
-          placeholder="Il tuo nome e cognome">
+        >
+
       </label>
 
+
       <label>
+
         Telefono
+
         <input
           type="tel"
           id="telefono"
           autocomplete="tel"
+          placeholder="Il tuo numero di telefono"
           required
-          placeholder="Il tuo numero di telefono">
+        >
+
       </label>
 
+
       <label>
+
         Comune
+
         <input
           type="text"
           id="comune"
           autocomplete="address-level2"
-          placeholder="Dove deve essere eseguito il lavoro?">
+          placeholder="Dove deve essere eseguito il lavoro?"
+        >
+
       </label>
 
+
       <label>
+
         Tipo di lavoro
 
         <select id="lavoro">
 
-          <option>Imbiancatura interna</option>
-          <option>Imbiancatura esterna</option>
-          <option>Antimuffa</option>
-          <option>Anticondensa</option>
-          <option>Decorazione</option>
-          <option>Legno</option>
-          <option>Altro</option>
+          <option>
+            Imbiancatura interna
+          </option>
+
+          <option>
+            Imbiancatura esterna
+          </option>
+
+          <option>
+            Antimuffa
+          </option>
+
+          <option>
+            Anticondensa
+          </option>
+
+          <option>
+            Decorazione
+          </option>
+
+          <option>
+            Legno
+          </option>
+
+          <option>
+            Altro
+          </option>
 
         </select>
 
       </label>
 
+
       <label>
+
         Superficie indicativa
 
         <input
           type="text"
           id="superficie"
-          placeholder="Es. 80 m² oppure non lo so">
+          placeholder="Es. 80 m² oppure non lo so"
+        >
+
       </label>
 
+
       <label>
+
         Descrizione del lavoro
 
         <textarea
           id="descrizione"
           rows="5"
+          placeholder="Descrivi brevemente il lavoro da eseguire"
           required
-          placeholder="Descrivi brevemente il lavoro da eseguire"></textarea>
+        ></textarea>
 
       </label>
 
-      <div class="photo-note">
 
-        📸 <strong>Puoi mandare anche delle foto.</strong>
+      <div class="info">
 
-        <br>
+        📸 <strong>Foto del lavoro</strong>
 
-        Dopo aver inviato la richiesta potrai allegare
-        direttamente le fotografie del lavoro nella chat WhatsApp.
+        <br><br>
+
+        Dopo aver inviato la richiesta,
+        il cliente potrà allegare direttamente
+        le fotografie nella chat WhatsApp.
 
       </div>
 
+
       <button
-        class="btn whatsapp submit-btn"
-        type="submit">
+        class="btn whatsapp submit"
+        type="submit"
+      >
 
         📲 Invia richiesta tramite WhatsApp
 
       </button>
+
 
     </form>
 
@@ -438,12 +617,19 @@
 </section>
 
 
+<!-- ========================= -->
+<!-- CONTATTI -->
+<!-- ========================= -->
+
 <section class="section">
 
-  <h2>Contatti</h2>
+  <h2>
+    Contatti
+  </h2>
 
   <p>
-    <strong>C.R. Color Finish</strong><br>
+    <strong>C.R. Color Finish</strong>
+    <br>
     Cominetti Roberto
   </p>
 
@@ -451,9 +637,10 @@
     📍 Dolceacqua e zone vicine
   </p>
 
-  <p>
-    📞 <strong>+39 328 017 9380</strong>
+  <p class="contact-number">
+    📞 +39 328 017 9380
   </p>
+
 
   <div class="buttons">
 
@@ -461,19 +648,24 @@
       class="btn whatsapp"
       href="https://wa.me/393280179380"
       target="_blank"
-      rel="noopener">
-      Scrivimi su WhatsApp
+      rel="noopener"
+    >
+      💬 Scrivimi su WhatsApp
     </a>
+
 
     <a
       class="btn"
-      href="tel:+393280179380">
-      Chiama +39 328 017 9380
+      href="tel:+393280179380"
+    >
+      📞 Chiama
     </a>
 
+
     <a
-      class="btn quote-main"
-      href="#preventivo">
+      class="btn quote-button"
+      href="#preventivo"
+    >
       📝 Richiedi un preventivo
     </a>
 
@@ -482,69 +674,143 @@
 </section>
 
 
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
 <footer>
 
-  C.R. Color Finish<br>
+  <strong>
+    C.R. Color Finish
+  </strong>
+
+  <br>
+
   Imbiancature e Decorazioni Artigianali
+
+  <br><br>
+
+  📞 +39 328 017 9380
 
 </footer>
 
+
+<!-- ========================= -->
+<!-- WHATSAPP -->
+<!-- ========================= -->
 
 <script>
 
   document
     .getElementById("preventivoForm")
-    .addEventListener("submit", function(event) {
+    .addEventListener(
+      "submit",
+      function(event) {
 
-      event.preventDefault();
+        event.preventDefault();
 
-      const nome =
-        document.getElementById("nome").value.trim();
 
-      const telefono =
-        document.getElementById("telefono").value.trim();
+        const nome =
+          document
+            .getElementById("nome")
+            .value
+            .trim();
 
-      const comune =
-        document.getElementById("comune").value.trim();
 
-      const lavoro =
-        document.getElementById("lavoro").value;
+        const telefono =
+          document
+            .getElementById("telefono")
+            .value
+            .trim();
 
-      const superficie =
-        document.getElementById("superficie").value.trim();
 
-      const descrizione =
-        document.getElementById("descrizione").value.trim();
+        const comune =
+          document
+            .getElementById("comune")
+            .value
+            .trim();
 
-      const messaggio =
-        "Buongiorno, vorrei richiedere un preventivo." +
-        "\n\n" +
-        "Nome: " + nome +
-        "\n" +
-        "Telefono: " + telefono +
-        "\n" +
-        "Comune: " + (comune || "Non indicato") +
-        "\n" +
-        "Tipo di lavoro: " + lavoro +
-        "\n" +
-        "Superficie indicativa: " +
-        (superficie || "Non indicata") +
-        "\n\n" +
-        "Descrizione:" +
-        "\n" +
-        descrizione +
-        "\n\n" +
-        "Posso inviare delle foto del lavoro tramite WhatsApp.";
 
-      const url =
-        "https://wa.me/393280179380?text=" +
-        encodeURIComponent(messaggio);
+        const lavoro =
+          document
+            .getElementById("lavoro")
+            .value;
 
-      window.open(url, "_blank");
 
-    });
+        const superficie =
+          document
+            .getElementById("superficie")
+            .value
+            .trim();
+
+
+        const descrizione =
+          document
+            .getElementById("descrizione")
+            .value
+            .trim();
+
+
+        const messaggio =
+
+          "Buongiorno, vorrei richiedere un preventivo." +
+
+          "\n\n" +
+
+          "Nome: " +
+          nome +
+
+          "\n" +
+
+          "Telefono: " +
+          telefono +
+
+          "\n" +
+
+          "Comune: " +
+          (comune || "Non indicato") +
+
+          "\n" +
+
+          "Tipo di lavoro: " +
+          lavoro +
+
+          "\n" +
+
+          "Superficie indicativa: " +
+          (superficie || "Non indicata") +
+
+          "\n\n" +
+
+          "Descrizione del lavoro:" +
+
+          "\n" +
+
+          descrizione +
+
+          "\n\n" +
+
+          "Posso inviare delle foto del lavoro tramite WhatsApp.";
+
+
+        const whatsappURL =
+
+          "https://wa.me/393280179380?text=" +
+
+          encodeURIComponent(messaggio);
+
+
+        window.open(
+          whatsappURL,
+          "_blank"
+        );
+
+      }
+
+    );
 
 </script>
+
 
 </body>
 </html>
